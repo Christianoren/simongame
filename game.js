@@ -69,9 +69,9 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-$("h1").click(function handler() {
-  nextSequence();
-});
+// $("h1").click(function handler() {
+//   nextSequence();
+// });
 
 function checkAnswer(currentLevel) {
 
