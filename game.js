@@ -20,21 +20,25 @@ function playSound(color) {
   switch (color) {
     case "red":
       var red = new Audio("sounds/red.mp3");
+      red.volume = 0.05;
       red.play();
       break;
 
     case "blue":
       var blue = new Audio("sounds/blue.mp3");
+      blue.volume = 0.05;
       blue.play();
       break;
 
     case "green":
       var green = new Audio("sounds/green.mp3");
+      green.volume = 0.05;
       green.play();
       break;
 
     case "yellow":
       var yellow = new Audio("sounds/yellow.mp3");
+      yellow.volume = 0.05;
       yellow.play();
       break;
   }
@@ -42,6 +46,7 @@ function playSound(color) {
 
 function wrong() {
   var wrong = new Audio("sounds/wrong.mp3");
+  wrong.volume = 0.05;
   wrong.play();
 }
 
@@ -64,7 +69,7 @@ function animatePress(currentColor) {
   }, 100);
 }
 
-$("body").keypress(function handler() {
+$("h1").click(function handler() {
   nextSequence();
 });
 
@@ -82,7 +87,7 @@ function checkAnswer(currentLevel) {
   } else {
     wrong();
     $("body").addClass("game-over");
-    $("h1").text("Game Over, Press Any Key to Restart");
+    $("h1").text("Game Over, Click on me to Restart");
 
     setTimeout(function () {
       $("body").removeClass("game-over");
